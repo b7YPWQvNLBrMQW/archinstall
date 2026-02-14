@@ -17,85 +17,6 @@
     "custom_commands": [
         "systemctl enable NetworkManager wpa_supplicant"
     ],
-    "disk_config": {
-        "btrfs_options": {
-            "snapshot_config": null
-        },
-        "config_type": "manual_partitioning",
-        "device_modifications": [
-            {
-                "device": "/dev/sda",
-                "partitions": [
-                    {
-                        "btrfs": [],
-                        "dev_path": null,
-                        "flags": [
-                            "boot",
-                            "esp"
-                        ],
-                        "fs_type": "fat32",
-                        "mount_options": [],
-                        "mountpoint": "/boot",
-                        "obj_id": "5b24017d-fc99-45d4-8c02-969b34a7e86d",
-                        "size": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "GiB",
-                            "value": 1
-                        },
-                        "start": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "MiB",
-                            "value": 1
-                        },
-                        "status": "create",
-                        "type": "primary"
-                    },
-                    {
-                        "btrfs": [],
-                        "dev_path": null,
-                        "flags": [],
-                        "fs_type": "ext4",
-                        "mount_options": [],
-                        "mountpoint": "/",
-                        "obj_id": "2a8b287d-b62b-48dd-8e04-29bb45c61754",
-                        "size": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "B",
-                            "value": 33283899392
-                        },
-                        "start": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "B",
-                            "value": 1074790400
-                        },
-                        "status": "create",
-                        "type": "primary"
-                    }
-                ],
-                "wipe": true
-            }
-        ],
-        "disk_encryption": {
-            "encryption_type": "luks",
-            "lvm_volumes": [],
-            "partitions": [
-                "2a8b287d-b62b-48dd-8e04-29bb45c61754"
-            ]
-        }
-    },
-    "hostname": "scarlet-arch",
     "kernels": [
         "linux",
         "linux-lts"
@@ -118,9 +39,9 @@
     },
     "ntp": true,
     "packages": [
-        "reflector","git","base-devel","fastfetch","btop",
-        "timeshift",
-        "keepass","moonlight-qt","nextcloud-client","firefox","transmission-remote-gtk","pycharm-community-edition","discord","freecad","gimp",
+        "git","base-devel",
+        "timeshift","reflector","fastfetch","btop",
+        "firefox","keepass","nextcloud-client","discord","moonlight-qt","transmission-remote-gtk","pycharm-community-edition","freecad","gimp",
         "steam","lutris","dolphin-emu","wine-staging","wine-gecko","wine-mono","winetricks","lib32-gnutls","lib32-libldap","lib32-libgpg-error","lib32-sqlite","lib32-libpulse","lib32-alsa-plugins","gamemode","lib32-gamemode","mangohud","lib32-mangohud"
     ],
     "parallel_downloads": 5,
