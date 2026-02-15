@@ -15,7 +15,10 @@
         "uki": true
     },
     "custom_commands": [
-        "systemctl enable NetworkManager wpa_supplicant"
+        "systemctl enable NetworkManager wpa_supplicant",
+        "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'",
+        "gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'",
+        "for UUID in extension-list@tu.berry dash-to-panel@jderose9.github.com apps-menu@gnome-shell-extensions.gcampax.github.com; do gnome-browser-connector gnome-extensions://$UUID/?action=install && gnome-extensions enable $UUID; done",
     ],
     "kernels": [
         "linux",
@@ -39,7 +42,8 @@
     },
     "ntp": true,
     "packages": [
-        "git","base-devel",
+        "git","base-devel", "nano", "vim", "openssh", "htop", "wget", "iwd", "wireless_tools", "smartmontools", "xdg-utils",
+        "gnome-tweaks", "gnome-shell-extensions", "gnome-browser-connector", 
         "timeshift","reflector","fastfetch","btop",
         "firefox","keepass","nextcloud-client","discord","moonlight-qt","transmission-remote-gtk","pycharm-community-edition","freecad","gimp",
         "steam","lutris","dolphin-emu","wine-staging","wine-gecko","wine-mono","winetricks","lib32-gnutls","lib32-libldap","lib32-libgpg-error","lib32-sqlite","lib32-libpulse","lib32-alsa-plugins","gamemode","lib32-gamemode","mangohud","lib32-mangohud"
@@ -50,10 +54,10 @@
         "greeter": "sddm",
         "profile": {
             "custom_settings": {
-                "KDE Plasma": {}
+                "GNOME": {}
             },
             "details": [
-                "KDE Plasma"
+                "GNOME"
             ],
             "main": "Desktop"
         }
