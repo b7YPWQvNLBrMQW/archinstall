@@ -56,7 +56,7 @@
     "parallel_downloads": 5,
     "profile_config": {
         "gfx_driver": "All open-source",
-        "greeter": "sddm",
+        "greeter": "gdm",
         "profile": {
             "custom_settings": {
                 "GNOME": {}
