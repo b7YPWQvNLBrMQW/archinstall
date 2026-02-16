@@ -46,7 +46,7 @@
         "git","base-devel", "nano", "vim", "openssh", "htop", "wget", "iwd", "wireless_tools", "smartmontools", "xdg-utils",
         "gnome-tweaks", "gnome-shell-extensions", "gnome-browser-connector", 
         "timeshift","reflector","fastfetch","btop",
-        "firefox","keepass","nextcloud-client","discord","moonlight-qt","transmission-remote-gtk","pycharm-community-edition","freecad","gimp",
+        "libreoffice-still", "firefox","keepass","nextcloud-client","discord","moonlight-qt","transmission-remote-gtk","pycharm-community-edition","freecad","gimp",
         "steam","lutris","dolphin-emu","wine-staging","wine-gecko","wine-mono","winetricks","lib32-gnutls","lib32-libldap","lib32-libgpg-error","lib32-sqlite","lib32-libpulse","lib32-alsa-plugins","gamemode","lib32-gamemode","mangohud","lib32-mangohud"
     ],
     "parallel_downloads": 5,
