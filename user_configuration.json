@@ -16,9 +16,14 @@
     },
     "custom_commands": [
         "systemctl enable NetworkManager wpa_supplicant",
+        "reflector --sort rate --latest 20 --protocol https --save /etc/pacman.d/mirrorlist && pacman -Syu --noconfirm",
         "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'",
         "gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'",
         "for UUID in extension-list@tu.berry dash-to-panel@jderose9.github.com apps-menu@gnome-shell-extensions.gcampax.github.com; do gnome-browser-connector gnome-extensions://$UUID/?action=install && gnome-extensions enable $UUID; done",
+        "export USER_NAME=$(find /home/* -maxdepth 0 -type d ! '(' -name lost+found ')' -printf '%f\n')",
+        "cd /home/$USER_NAME && wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && bash /home/$USER_NAME/Miniconda3-latest-Linux-x86_64.sh && rm -f /home/$USER_NAME/Miniconda3-latest-Linux-x86_64.sh",
+        "su -c 'git clone https://aur.archlinux.org/yay.git /tmp/yay' $USER_NAME && cd /tmp/yay && su -c 'makepkg -si --noconfirm' $USER_NAME && cd / && rm -rf /tmp/yay",
+        "su -c 'yay -S python-setuptools-reproducible protonup-qt steamtinkerlaunch dxvk-bin lutris-wine-meta bottles visual-studio-code-bin' $USER_NAME"
     ],
     "kernels": [
         "linux",
