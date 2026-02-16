@@ -17,13 +17,9 @@
     "custom_commands": [
         "systemctl enable NetworkManager wpa_supplicant",
         "reflector --sort rate --latest 20 --protocol https --save /etc/pacman.d/mirrorlist && pacman -Syu --noconfirm",
-        "export USER_NAME=$(find /home/* -maxdepth 0 -type d ! '(' -name lost+found ')' -printf '%f\n')",
-        "su -c 'gsettings set org.gnome.desktop.interface color-scheme prefer-dark' $USER_NAME",
-        "su -c 'gsettings set org.gnome.desktop.wm.preferences button-layout :minimize,maximize,close' $USER_NAME",
-        "su -c 'for UUID in extension-list@tu.berry dash-to-panel@jderose9.github.com apps-menu@gnome-shell-extensions.gcampax.github.com; do gnome-browser-connector gnome-extensions://${UUID/@/%40}/?action=install && gnome-extensions enable $UUID; done' $USER_NAME",
-        "su -c 'git clone https://aur.archlinux.org/yay.git /tmp/yay && cd /tmp/yay && makepkg -si --noconfirm && cd / && rm -rf /tmp/yay' $USER_NAME",
-        "su -c 'yay -S gdm-settings python-setuptools-reproducible protonup-qt steamtinkerlaunch dxvk-bin lutris-wine-meta bottles visual-studio-code-bin' $USER_NAME",
-        "su -c 'cd /home/$USER_NAME && wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && bash /home/$USER_NAME/Miniconda3-latest-Linux-x86_64.sh && rm -f /home/$USER_NAME/Miniconda3-latest-Linux-x86_64.sh' $USER_NAME"
+        "su -c 'gsettings set org.gnome.desktop.interface color-scheme prefer-dark' $(find /home/* -maxdepth 0 -type d ! '(' -name lost+found ')' -printf '%f\n')",
+        "su -c 'gsettings set org.gnome.desktop.wm.preferences button-layout :minimize,maximize,close' $(find /home/* -maxdepth 0 -type d ! '(' -name lost+found ')' -printf '%f\n')",
+        "su -c 'for UUID in extension-list@tu.berry dash-to-panel@jderose9.github.com apps-menu@gnome-shell-extensions.gcampax.github.com; do gnome-browser-connector gnome-extensions://${UUID/@/%40}/?action=install && gnome-extensions enable $UUID; done' $(find /home/* -maxdepth 0 -type d ! '(' -name lost+found ')' -printf '%f\n')",
     ],
     "kernels": [
         "linux",
