@@ -19,6 +19,7 @@
         "reflector --sort rate --latest 20 --protocol https --save /etc/pacman.d/mirrorlist && pacman -Syu --noconfirm",
         "su -c 'gsettings set org.gnome.desktop.interface color-scheme prefer-dark' $(find /home/* -maxdepth 0 -type d ! '(' -name lost+found ')' -printf '%f\n')",
         "su -c 'gsettings set org.gnome.desktop.wm.preferences button-layout :minimize,maximize,close' $(find /home/* -maxdepth 0 -type d ! '(' -name lost+found ')' -printf '%f\n')",
+        "su -c 'gsettings set org.gnome.desktop.wm.preferences audible-bell false' $(find /home/* -maxdepth 0 -type d ! '(' -name lost+found ')' -printf '%f\n')",
         "su -c 'for UUID in extension-list@tu.berry dash-to-panel@jderose9.github.com apps-menu@gnome-shell-extensions.gcampax.github.com; do gnome-browser-connector gnome-extensions://${UUID/@/%40}/?action=install && gnome-extensions enable $UUID; done' $(find /home/* -maxdepth 0 -type d ! '(' -name lost+found ')' -printf '%f\n')",
     ],
     "kernels": [
